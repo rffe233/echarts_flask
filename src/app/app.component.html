@@ -1,0 +1,142 @@
+<!--<div echarts [options]="options" ></div>-->
+<!--<div echarts [options]="options1"></div>-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>大数据可视化系统数据分析通用模版</title>
+  <base href="/">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<!--<div class="loading">-->
+<!--  <div class="loadbox">-->
+<!--    <img src="images/loading.gif" /> 页面加载中...-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+      <div class="boxall" style="height: calc(58% - .15rem)">
+        <div class="alltitle">
+          逐年电影数据
+        </div>
+        <div class=" boxnav " echarts [options]="options">
+        </div>
+      </div>
+      <div class="boxall" style="height: calc(42% - .15rem)">
+        <div class="alltitle">
+          电影类型分布
+        </div>
+        <div class="boxnav"echarts [options]="options1"></div>
+      </div> </li>
+    <li>
+      <div class="boxall" style="height: calc(20% - .15rem)">
+        <ul class="row h100 clearfix">
+          <li class="col-6">
+            <div class="sqzs h100">
+              <p>电影总览</p>
+              <h1><span>{{filmnumber}}</span>部</h1>
+            </div> </li>
+          <li class="col-6">
+            <ul class="row h100 clearfix">
+              <li class="col-4">
+                <div class="tit01">
+                  评分分布
+                </div>
+                <div class="piebox" echarts [options]="options2"></div> </li>
+              <li class="col-4">
+                <div class="tit01">
+                  时间分布
+                </div>
+                <div class="piebox" echarts [options]="options3"></div> </li>
+              <li class="col-4">
+                <div class="tit01">
+                  地区分布
+                </div>
+                <div class="piebox" echarts [options]="options4"></div> </li>
+            </ul> </li>
+        </ul>
+      </div>
+      <div class="boxall" style="height: calc(38% - .15rem)">
+        <div class="alltitle">
+          地区电影评分情况
+        </div>
+        <div class="boxnav" echarts [options]="options10"></div>
+      </div>
+      <div class="boxall" style="height: calc(42% - .15rem)">
+        <div class="alltitle">
+          电影评分人数时间分布
+        </div>
+        <div class="boxnav" echarts [options]="options9"></div>
+      </div> </li>
+    <li>
+      <div class="boxall" style="height: calc(33.333% - .15rem)">
+        <div class="alltitle">
+          十佳演员
+        </div>
+        <div class="boxnav" echarts [options]="options7"></div>
+      </div>
+      <div class="boxall" style="height: calc(33.333% - .15rem)">
+        <div class="alltitle">
+          好片推荐
+        </div>
+        <div class="boxnav" id="">
+
+          <table border="0" cellspacing="0">
+            <tbody>
+            <tr>
+              <th></th>
+              <th>电影名称</th>
+              <th>电影评分</th>
+              <th>电影时间</th>
+              <th>电影评分人数</th>
+            </tr>
+            <tr>
+              <th>评分最高电影</th>
+              <td>{{movieName1}}</td>
+              <td>{{rate1}}</td>
+              <td>{{ratenum1}}</td>
+              <td>{{time1}}</td>
+            </tr>
+            <tr>
+              <th>最受关注电影</th>
+              <td>{{movieName2}}</td>
+              <td>{{rate2}}</td>
+              <td>{{ratenum2}}</td>
+              <td>{{time2}}</td>
+
+            </tr>
+            <tr>
+              <th>时间最长电影</th>
+              <td>{{movieName3}}</td>
+              <td>{{rate3}}暂无</td>
+              <td>{{ratenum3}}暂无</td>
+              <td>{{time3}}</td>
+            </tr>
+            <tr>
+              <th>评分最低电影</th>
+              <td>{{movieName4}}嫁给大山的女人</td>
+              <td>{{rate4}}</td>
+              <td>{{ratenum4}}</td>
+              <td>{{time4}}</td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div class="boxall" style="height: calc(33.333% - .15rem)">
+        <div class="alltitle">
+          十佳导演
+        </div>
+        <div class="boxnav" echarts [options]="options6" style="height:calc(100% - .3rem);"></div>
+      </div> </li>
+  </ul>
+</div>
+<!--<script type="text/javascript" src="js/echarts.min.js"></script>-->
+<!--<script language="JavaScript" src="js/js.js"></script>-->
+</body>
+</html>
